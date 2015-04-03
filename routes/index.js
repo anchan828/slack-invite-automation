@@ -26,13 +26,13 @@ router.post('/invite', function(req, res) {
         if (err) { return res.send('Error:' + err); }
         body = JSON.parse(body);
         if (body.ok) {
-          res.send('Success! Check "'+ req.body.email +'" for an invite from Slack.');
+          res.send('ユーザー情報を送信しました！<br/>もうしばらくすると "'+ req.body.email +'" 宛に Slack から招待メールが届きます。メールの案内にしたがって参加登録をしましょう。');
         } else {
-          res.send('Failed! ' + body.error)
+          res.send('エラー！戻ってもう一度参加登録をしてください。 ' + body.error)
         }
       });
   } else {
-    res.status(400).send('email is required.');
+    res.status(400).send('メールアドレスは必須です');
   }
 });
 
