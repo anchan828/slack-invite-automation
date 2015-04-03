@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+input {
+  font-size: 24px;
+  width: 400px;
+}
+input[name="first_name"],
+input[name="last_name"] {
+  width: 49.2% !important;
+}
+input[name="last_name"] {
+  margin-left: 1%;
+}
